@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* ====== ДЕСКТОПНАЯ ВЕРСИЯ (≥ 1024px) ====== */
+@media (min-width: 1024px) {
+    .album-description {
+        font-size: 22px;
+        max-width: 900px;
+    }
+
+    .tracklist li {
+        font-size: 20px;
+    }
+}
+
+/* ====== МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px) ====== */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .album-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 36px; /* Уменьшаем заголовок */
+    }
+
+    .album-details {
+        flex-direction: column; /* Столбец вместо строки */
+        gap: 10px;
+    }
+
+    .tracklist li {
+        font-size: 16px;
+        grid-template-columns: 30px auto; /* Уменьшаем отступы */
+    }
+
+    .album-tracklist {
+        max-width: 100%; /* На всю ширину */
+        margin: 20px auto;
+    }
+}
+
+
+/* ====== ОБЛАСТЬ С ИЗОБРАЖЕНИЕМ ====== */
+.album-image {
+    width: 100vw; /* По всей ширине экрана */
+    overflow: hidden; /* Обрезаем лишнее */
+}
+
+.album-image img {
+    width: 100%; /* Заполняем всю ширину */
+    height: auto; /* Автоматическая высота */
+    display: block;
+}
+
+/* Отступ после изображения */
+.album-info {
+    margin-top: 30px;
+}
+
+/* ====== HEADER: ЛОГО ====== */
+header {
+    background-color: #000;
+    padding: 10px 0; /* Убрали нижний отступ */
+    text-align: center;
+}
+
+.logo {
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 20px; /* Добавляем отступ вниз */
+}
+
+/* ====== NAVIGATION ====== */
+nav {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Делаем секцию отдельной */
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li:nth-child(1) a:hover { color: #4FB8D6; } /* LP1 */
+nav ul li:nth-child(2) a:hover { color: #D49350; } /* MAGDALENE */
+nav ul li:nth-child(3) a:hover { color: #1073D8; } /* CAPRISONGS */
+nav ul li:nth-child(4) a:hover { color: #BAA49E; } /* EUSEXUA */
+
+.album-tag {
+    text-align: center; /* Центрируем текст */
+    color: #696969; /* Серый цвет */
+    font-size: 12px; /* Размер шрифта */
+    text-transform: uppercase; /* Заглавные буквы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+h1 {
+    text-align: center; /* Центрируем текст */
+    color: #000; /* Чёрный цвет */
+    font-size: 50px; /* Размер шрифта */
+    font-weight: lighter; /* Жирный текст */
+    font-style: italic; /* Курсив */
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 10px;
+}
+
+.album-year {
+    text-align: center; /* Центрируем текст */
+    color: #000; /* Серый цвет */
+    font-size: 12px; /* Размер шрифта */
+    text-transform: uppercase; /* Заглавные буквы */
+    margin-top: 0px; /* Отступ сверху */
+}
+
+.album-details {
+    display: flex; /* Размещаем элементы в строку */
+    justify-content: center; /* Выравниваем по центру */
+    gap: 30px; /* Отступ между GENRE и LABEL */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.album-details p {
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.album-description {
+    text-align: center; /* Центрируем текст */
+    max-width: 1000px; /* Ограничиваем ширину, чтобы не было слишком растянуто */
+    margin: 20px auto; /* Делаем отступ сверху и центрируем блок по горизонтали */
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300; /* Ultra Light */
+}
+
+.description {
+    font-size: 20px; /* Размер шрифта */
+    line-height: 1.6; /* Интервал между строк */
+    color: #000; /* Чёрный цвет */
+}
+
+.album-tracklist {
+    text-align: center; /* Центрируем заголовок и список */
+    margin: 40px auto; /* Отступы сверху и снизу + центрирование */
+    max-width: 600px; /* Ограничиваем ширину */
+}
+
+h2 {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300; /* Ultra Light */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+.tracklist {
+    list-style: none; /* Убираем стандартные номера */
+    padding: 0;
+    margin: 0 auto;
+    text-align: left; /* Выравниваем текст влево */
+    display: grid;
+    justify-content: center; /* Центрируем список */
+    counter-reset: tracklist; /* Сбрасываем нумерацию */
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300; /* Ultra Light */
+}
+
+.tracklist li {
+    display: grid;
+    grid-template-columns: 40px auto; /* Первая колонка для номера, вторая — для текста */
+    gap: 10px; /* Отступ между колонками */
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    padding: 5px 0;
+    counter-increment: tracklist; /* Увеличиваем счётчик */
+}
+
+.tracklist li::before {
+    content: counter(tracklist) "."; /* Автоматически добавляем номер */
+    text-align: right; /* Выровняем номера справа */
+    width: 30px;
+}
+
+.album-tracklist {
+    opacity: 0; /* По умолчанию скрыто */
+    transform: translateY(50px); /* Сдвиг вниз */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.album-tracklist.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.album-image {
+    width: 100vw;
+    overflow: hidden;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Плавное исчезновение */
+}
+
+.fade-out {
+    opacity: 0; /* Исчезновение */
+}
+
+/* Эффект при наведении на треклист */
+.tracklist li:hover {
+    color: #4FB8D6;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out;
+}
+
+/* Наведение на ссылки */
+nav ul li a:hover {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Анимация для fade-out */
+.fade-out {
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Эффект при наведении на треклист с динамическими цветами */
+.tracklist li {
+    transition: color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.tracklist li:hover {
+    transform: scale(1.05);
+}
+
+/* Цвет при наведении в зависимости от текущего альбома */
+body[data-album="lp1"] .tracklist li:hover { color: #4FB8D6; } /* LP1 */
+body[data-album="magdalene"] .tracklist li:hover { color: #D49350; } /* MAGDALENE */
+body[data-album="caprisongs"] .tracklist li:hover { color: #1073D8; } /* CAPRISONGS */
+body[data-album="eusexua"] .tracklist li:hover { color: #BAA49E; } /* EUSEXUA */
