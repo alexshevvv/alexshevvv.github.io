@@ -30,21 +30,21 @@ body {
     }
 
     h1 {
-        font-size: 36px; /* Уменьшаем заголовок */
+        font-size: 36px;
     }
 
     .album-details {
-        flex-direction: column; /* Столбец вместо строки */
+        flex-direction: column; 
         gap: 10px;
     }
 
     .tracklist li {
         font-size: 16px;
-        grid-template-columns: 30px auto; /* Уменьшаем отступы */
+        grid-template-columns: 30px auto; 
     }
 
     .album-tracklist {
-        max-width: 100%; /* На всю ширину */
+        max-width: 100%;
         margin: 20px auto;
     }
 }
@@ -70,7 +70,7 @@ body {
 /* ====== HEADER: ЛОГО ====== */
 header {
     background-color: #000;
-    padding: 10px 0; /* Убрали нижний отступ */
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -79,7 +79,7 @@ header {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 10px;
-    margin-bottom: 20px; /* Добавляем отступ вниз */
+    margin-bottom: 20px;
 }
 
 /* ====== NAVIGATION ====== */
@@ -116,9 +116,9 @@ nav ul li:nth-child(3) a:hover { color: #1073D8; } /* CAPRISONGS */
 nav ul li:nth-child(4) a:hover { color: #BAA49E; } /* EUSEXUA */
 
 .album-tag {
-    text-align: center; /* Центрируем текст */
-    color: #696969; /* Серый цвет */
-    font-size: 12px; /* Размер шрифта */
+    text-align: center; 
+    color: #696969; 
+    font-size: 12px; 
     text-transform: uppercase; /* Заглавные буквы */
     margin-top: 20px; /* Отступ сверху */
 }
@@ -156,32 +156,38 @@ h1 {
 }
 
 .album-description {
-    text-align: center; /* Центрируем текст */
-    max-width: 1000px; /* Ограничиваем ширину, чтобы не было слишком растянуто */
-    margin: 20px auto; /* Делаем отступ сверху и центрируем блок по горизонтали */
+    text-align: center; 
+    max-width: 1000px; 
+    margin: 20px auto; 
     font-family: "Helvetica Neue", sans-serif;
-    font-weight: 300; /* Ultra Light */
+    font-weight: 300; 
 }
 
 .description {
-    font-size: 20px; /* Размер шрифта */
+    font-size: 20px; 
     line-height: 1.6; /* Интервал между строк */
-    color: #000; /* Чёрный цвет */
+    color: #000; 
 }
 
 .album-tracklist {
-    text-align: center; /* Центрируем заголовок и список */
-    margin: 40px auto; /* Отступы сверху и снизу + центрирование */
-    max-width: 600px; /* Ограничиваем ширину */
+    text-align: center;
+    margin: 40px auto; 
+    max-width: 600px; 
 }
 
 h2 {
     font-family: "Helvetica Neue", sans-serif;
-    font-weight: 300; /* Ultra Light */
+    font-weight: 300;
     font-size: 28px;
     margin-bottom: 20px;
 }
 
+h3 {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
 
 .tracklist {
     list-style: none; /* Убираем стандартные номера */
